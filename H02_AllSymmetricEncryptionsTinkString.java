@@ -23,6 +23,7 @@ package net.bplaced.javacrypto.tink;
 * The programm uses these external libraries:
 * jar-Datei: https://mvnrepository.com/artifact/com.google.crypto.tink/tink 
 * jar-Datei: https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+* jar-Datei: https://mvnrepository.com/artifact/org.json/json
 */
 import java.io.ByteArrayOutputStream;
 

@@ -23,6 +23,7 @@ package net.bplaced.javacrypto.tink;
 * The programm uses these external libraries:
 * jar-Datei: https://mvnrepository.com/artifact/com.google.crypto.tink/tink 
 * jar-Datei: https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+* jar-Datei: https://mvnrepository.com/artifact/org.json/json
 */
 
 import java.io.DataInputStream;
@@ -60,6 +61,7 @@ public final class H03_SymmetricEncryptionTinkSaveKeysFile {
 
 		String aadtextString = "Hier stehen die AAD-Daten (additional authenticated data)";
 		String filenameKeyString = "h03_aesgcm256.txt";
+		//String filenamePlainString = "a11_test_1mb.dat";
 		String filenamePlainString = "h03_test.txt";
 		String filenameEncString = "h03_test_enc.txt";
 		String filenameDecString = "h03_test_dec.txt";
