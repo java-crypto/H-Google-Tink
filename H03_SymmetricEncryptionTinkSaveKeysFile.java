@@ -5,10 +5,10 @@ package net.bplaced.javacrypto.tink;
 * Programmierer/Programmer: Michael Fehr
 * Copyright/Copyright: frei verwendbares Programm (Public Domain)
 * Copyright: This is free and unencumbered software released into the public domain.
-* Lizenttext/Licence: <http://unlicense.org>
+* Lizenztext/Licence: <http://unlicense.org>
 * getestet mit/tested with: Java Runtime Environment 8 Update 191 x64
 * getestet mit/tested with: Java Runtime Environment 11.0.1 x64
-* Datum/Date (dd.mm.jjjj): 22.01.2019
+* Datum/Date (dd.mm.jjjj): 23.01.2019
 * Funktion: verschlüsselt eine Datei und AAD-Daten mit Google Tink AES GCM
 * Function: encrypts a file and aad-data using Google Tink AES GCM
 *
@@ -61,8 +61,7 @@ public final class H03_SymmetricEncryptionTinkSaveKeysFile {
 
 		String aadtextString = "Hier stehen die AAD-Daten (additional authenticated data)";
 		String filenameKeyString = "h03_aesgcm256.txt";
-		//String filenamePlainString = "a11_test_1mb.dat";
-		String filenamePlainString = "h03_test.txt";
+		String filenamePlainString = "a11_test_1mb.dat";
 		String filenameEncString = "h03_test_enc.txt";
 		String filenameDecString = "h03_test_dec.txt";
 
@@ -168,36 +167,6 @@ public final class H03_SymmetricEncryptionTinkSaveKeysFile {
 		// decryptedtextByte löschen
 		Arrays.fill(decryptedtextByte, (byte) 0);
 		return aadtextByte;
-	}
-
-	public static void encryptAesGcmWithoutAadTink(KeysetHandle keysetHandle, String filenamePlainString,
-			String filenameEncString) throws GeneralSecurityException {
-		byte[] aadtextByte = null;
-		// initialisierung
-		Aead aead = AeadFactory.getPrimitive(keysetHandle);
-		// einlesen des plaintextes
-		byte[] plaintextByte = readBytesFromFileNio(filenamePlainString);
-		// verschlüsselung
-		byte[] ciphertextByte = aead.encrypt(plaintextByte, aadtextByte);
-		Arrays.fill(plaintextByte, (byte) 0); // plaintextByte löschen
-		// ciphertextByte speichern
-		writeBytesToFileNio(ciphertextByte, filenameEncString);
-		Arrays.fill(ciphertextByte, (byte) 0); // ciphertextByte löschen
-	}
-
-	public static void decryptAesGcmWithoutAadTink(KeysetHandle keysetHandle, String filenameEncString,
-			String filenameDecString) throws GeneralSecurityException {
-		byte[] aadtextByte = null;
-		// initialisierung
-		Aead aead = AeadFactory.getPrimitive(keysetHandle);
-		// einlesen des ciphertextes
-		byte[] ciphertextByte = readBytesFromFileNio(filenameEncString);
-		// entschlüsselung
-		byte[] decryptedtextByte = aead.decrypt(ciphertextByte, aadtextByte);
-		Arrays.fill(ciphertextByte, (byte) 0); // ciphertextByte löschen
-		// decryptedtextByte speichern
-		writeBytesToFileNio(decryptedtextByte, filenameDecString);
-		Arrays.fill(decryptedtextByte, (byte) 0); // decryptedtextByte löschen
 	}
 
 	private static boolean FileExistsCheck(String dateinameString) {

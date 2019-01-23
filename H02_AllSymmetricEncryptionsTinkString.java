@@ -5,10 +5,10 @@ package net.bplaced.javacrypto.tink;
 * Programmierer/Programmer: Michael Fehr
 * Copyright/Copyright: frei verwendbares Programm (Public Domain)
 * Copyright: This is free and unencumbered software released into the public domain.
-* Lizenttext/Licence: <http://unlicense.org>
+* Lizenztext/Licence: <http://unlicense.org>
 * getestet mit/tested with: Java Runtime Environment 8 Update 191 x64
 * getestet mit/tested with: Java Runtime Environment 11.0.1 x64
-* Datum/Date (dd.mm.jjjj): 22.01.2019
+* Datum/Date (dd.mm.jjjj): 23.01.2019
 * Funktion: verschlüsselt einen String mit Google Tink Routinen
 * Function: encrypts a String using Google Tink Encryption
 *
@@ -25,8 +25,8 @@ package net.bplaced.javacrypto.tink;
 * jar-Datei: https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
 * jar-Datei: https://mvnrepository.com/artifact/org.json/json
 */
-import java.io.ByteArrayOutputStream;
 
+import java.io.ByteArrayOutputStream;
 import com.google.crypto.tink.Aead;
 import com.google.crypto.tink.CleartextKeysetHandle;
 import com.google.crypto.tink.JsonKeysetWriter;

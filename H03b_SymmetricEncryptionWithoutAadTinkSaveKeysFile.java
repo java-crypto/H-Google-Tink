@@ -5,10 +5,10 @@ package net.bplaced.javacrypto.tink;
 * Programmierer/Programmer: Michael Fehr
 * Copyright/Copyright: frei verwendbares Programm (Public Domain)
 * Copyright: This is free and unencumbered software released into the public domain.
-* Lizenttext/Licence: <http://unlicense.org>
+* Lizenztext/Licence: <http://unlicense.org>
 * getestet mit/tested with: Java Runtime Environment 8 Update 191 x64
 * getestet mit/tested with: Java Runtime Environment 11.0.1 x64
-* Datum/Date (dd.mm.jjjj): 22.01.2019
+* Datum/Date (dd.mm.jjjj): 23.01.2019
 * Funktion: verschlüsselt eine Datei mit Google Tink AES GCM ohne AAD-Daten
 * Function: encrypts a File using Google Tink AES GCM without AAD-data
 *
@@ -55,7 +55,7 @@ public final class H03b_SymmetricEncryptionWithoutAadTinkSaveKeysFile {
 		AeadConfig.register();
 
 		String filenameKeyString = "h03_aesgcm256.txt";
-		String filenamePlainString = "h03_test_enc.txt";
+		String filenamePlainString = "a11_test_1mb.dat";
 		String filenameEncString = "h03_test_enc.txt";
 		String filenameDecString = "h03_test_dec.txt";
 
