@@ -8,7 +8,7 @@ package net.bplaced.javacrypto.tink;
 * Lizenztext/Licence: <http://unlicense.org>
 * getestet mit/tested with: Java Runtime Environment 8 Update 191 x64
 * getestet mit/tested with: Java Runtime Environment 11.0.1 x64
-* Datum/Date (dd.mm.jjjj): 23.01.2019
+* Datum/Date (dd.mm.jjjj): 26.01.2019
 * Funktion: verschlüsselt grosse Dateien und AAD-Daten mit Google Tink Streaming AES GCM
 * Function: encrypts a large file and aad-data using Google Tink Streaming AES GCM
 *
@@ -92,7 +92,7 @@ public final class H04_SymmetricStreamEncryptionTinkSaveKeysLargeFile {
 		System.out.println("Diese aadtext-Daten sind angefügt:\n" + new String(aadtextByte));
 		encryptStreamingGcmAadTink(keysetHandle, filenamePlainString, filenameEncString, aadtextByte);
 		System.out.println("Die Datei " + filenamePlainString + " wurde verschlüsselt in " + filenameEncString);
-		Arrays.fill(aadtextByte,(byte) 0); // array löschen
+		Arrays.fill(aadtextByte, (byte) 0); // array löschen
 
 		// entschlüsselung, einlesen des schlüssels und der verschlüsselten datei
 		System.out.println("\n# # # Entschlüsselung einer Datei # # #");
@@ -147,9 +147,9 @@ public final class H04_SymmetricStreamEncryptionTinkSaveKeysLargeFile {
 			}
 			bis.close();
 			os.close();
-			Arrays.fill(buf,(byte) 0); // array löschen
+			Arrays.fill(buf, (byte) 0); // array löschen
 		}
-		Arrays.fill(aadtextByte,(byte) 0); // array löschen
+		Arrays.fill(aadtextByte, (byte) 0); // array löschen
 	}
 
 	public static byte[] decryptStreamingGcmAadTink(KeysetHandle keysetHandle, String filenameEncString,
@@ -170,13 +170,12 @@ public final class H04_SymmetricStreamEncryptionTinkSaveKeysLargeFile {
 			StreamingAead aead = StreamingAeadFactory.getPrimitive(keysetHandle);
 			InputStream in = aead.newDecryptingStream(bis, aadtextByte);
 			byte[] ibuf = new byte[4096];
-			while (in.read(ibuf) != -1) {
+			int numRead = 0;
+			while ((numRead = in.read(ibuf)) >= 0) {
 				if (ibuf != null)
-					bos.write(ibuf);
+					bos.write(ibuf, 0, numRead);
 			}
-			if (ibuf != null)
-				bos.write(ibuf);
-			Arrays.fill(ibuf,(byte) 0); // array löschen
+			Arrays.fill(ibuf, (byte) 0); // array löschen
 		}
 		return aadtextByte;
 	}
