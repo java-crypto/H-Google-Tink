@@ -1,0 +1,13 @@
+{
+    "primaryKeyId": 434282524,
+    "key": [{
+        "keyData": {
+            "typeUrl": "type.googleapis.com/google.crypto.tink.EcdsaPublicKey",
+            "keyMaterialType": "ASYMMETRIC_PUBLIC",
+            "value": "EgYIBBADGAIaMC364lQb+GETrD5M0b2cWRnkqBFABbrX/ccwPC6js6D3PF5q7IB91EnjBX4/hUO0MiIwZBB+yoXDQ2fgPN3fXn8olfFaU0m3EyYyYP1zaBK4Y5l2+cGSbFlKCBCUWyDOt+GS"
+        },
+        "outputPrefixType": "TINK",
+        "keyId": 434282524,
+        "status": "ENABLED"
+    }]
+}

@@ -1,0 +1,4 @@
+MIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQBH49LWA2+zSgkIpAhWYwCUaa///sKBMlIoWe27l/gjqowP24C7T4siCBWye9Ph1vW2X7weWZHcfTNZyESsGN5xEcAwBjuLrq5w1MEAmk9D4VWp4VGR4OfVceFixwU7cSHMbuNuev4yiqUrdty9ENyhXg5t8BNwlFN+KYJsoKwRokaPAE=
+VGhpcyBpcyB0aGUgbWVzc2FnZQ==
+MIGIAkIAlTJDqZDA14KA6p1PyPkjnvuGMru+leVt+Kk0CudQR6y9JcwH1QXfFvbEn7K+GNoK9XG5OkRy2xQMSgj+3M51Ny0CQgGyKSsjZIIVKFEVcDvxOK6h/G0OjwXZ3awz5oT95bcKyelFCy041wggzCawLvGTBbV5oemiLW12Od93q/HyAeensA==
+This file contains data in base64-format: publicKey, message, signature. Number in filename is keylength.
