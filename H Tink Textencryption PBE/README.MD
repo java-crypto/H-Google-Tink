@@ -13,13 +13,13 @@ and http://javacrypto.bplaced.net/h-tink-string-encryption-using-pbe-and-gui/ (E
 The Explanation for the console-version is available under 
 http://javacrypto.bplaced.net/h-tink-stringverschluesselung-mit-pbe-konsole/ (German only).
 
-Die Einbindung der Java Klasse TinkPbe.java erfolgt mit 4 Zeilen Programmcode:
-  AeadConfig.register(); // tink initialisation
-  TinkPbe tpbe = new TinkPbe(); // tink pbe initialisation
-  String ciphertextString = tpbe.encrypt(passwordChar, plaintextString); // encryption
-	String decryptedtextString = tpbe.decrypt(passwordChar, ciphertextString); // decryption
+Die Einbindung der Java Klasse TinkPbe.java erfolgt mit nur 4 Zeilen Programmcode /
+You can include the library TinkPbe.java with just 4 lines of code:
 
-
+AeadConfig.register(); // tink initialisation
+TinkPbe tpbe = new TinkPbe(); // tink pbe initialisation
+String ciphertextString = tpbe.encrypt(passwordChar, plaintextString); // encryption
+String decryptedtextString = tpbe.decrypt(passwordChar, ciphertextString); // decryption
 
 * Sicherheitshinweis * Einige Programme sind kryptographisch nicht sicher und sollten nicht für den Produktiveinsatz genutzt werden, sie werden hier nur zu Lern- und Lehrzwecken bereitgestellt. 
 
