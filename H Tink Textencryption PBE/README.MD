@@ -15,8 +15,8 @@ http://javacrypto.bplaced.net/h-tink-stringverschluesselung-mit-pbe-konsole/ (Ge
 
 Die Einbindung der Java Klasse TinkPbe.java erfolgt mit 4 Zeilen Programmcode:
   AeadConfig.register(); // tink initialisation
-	TinkPbe tpbe = new TinkPbe(); // tink pbe initialisation
-	String ciphertextString = tpbe.encrypt(passwordChar, plaintextString); // encryption
+  TinkPbe tpbe = new TinkPbe(); // tink pbe initialisation
+  String ciphertextString = tpbe.encrypt(passwordChar, plaintextString); // encryption
 	String decryptedtextString = tpbe.decrypt(passwordChar, ciphertextString); // decryption
 
 
