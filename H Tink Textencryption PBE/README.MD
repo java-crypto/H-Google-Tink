@@ -17,9 +17,13 @@ Die Einbindung der Java Klasse TinkPbe.java erfolgt mit nur 4 Zeilen Programmcod
 You can include the library TinkPbe.java with just 4 lines of code:
 
 AeadConfig.register(); // tink initialisation
+
 TinkPbe tpbe = new TinkPbe(); // tink pbe initialisation
+
 String ciphertextString = tpbe.encrypt(passwordChar, plaintextString); // encryption
+
 String decryptedtextString = tpbe.decrypt(passwordChar, ciphertextString); // decryption
+
 
 * Sicherheitshinweis * Einige Programme sind kryptographisch nicht sicher und sollten nicht für den Produktiveinsatz genutzt werden, sie werden hier nur zu Lern- und Lehrzwecken bereitgestellt. 
 
